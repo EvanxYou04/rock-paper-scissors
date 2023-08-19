@@ -5,7 +5,11 @@ function randInt(min, max) {
 }
 
 function getComputerChoice() {
-    return choices[randInt(0 , choices.length)];
+    return choices[randInt(0 , choices.length - 1)];
+}
+
+function playRound(playerSelection, computerSelection) {
+    //code
 }
 
 // console.log(getComputerChoice())
