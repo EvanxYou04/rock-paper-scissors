@@ -43,10 +43,25 @@ function playRound(playerSelection, computerSelection) {
     }
 }   
 
+const result = document.querySelector('.result');
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click' , () => {
-        playRound(button.className, getComputerChoice());
+        let round = playRound(button.className, getComputerChoice());
+        switch (round) {
+            case 1:
+                result.textContent = "You Win.";
+                break;
+            case -1:
+                result.textContent = "Computer Wins.";
+                break;
+            case 0:
+                result.textContent =  "Tie.";
+                break;            
+            default:
+                "Error Occured."
+                break;
+        };
     });
 });
 
