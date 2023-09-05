@@ -47,7 +47,7 @@ const result = document.querySelector('.result');
 const buttons = document.querySelectorAll('button');
 buttons.forEach((button) => {
     button.addEventListener('click' , () => {
-        let round = playRound(button.className, getComputerChoice());
+        const round = playRound(button.className, getComputerChoice());
         switch (round) {
             case 1:
                 result.textContent = "You Win.";
