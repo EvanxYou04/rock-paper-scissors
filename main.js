@@ -44,7 +44,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function getPlayerChoice() {
-    let playerChoice = prompt("Select your choice (Rock,Paper,Scissors): ");
+    // let playerChoice = prompt("Select your choice (Rock,Paper,Scissors): ");
     switch (playerChoice.toLowerCase()) {
         case "rock":
             playerChoice = choices[0];
@@ -66,4 +66,4 @@ function getPlayerChoice() {
 }   
 
 
-console.log(playRound(getPlayerChoice(), getComputerChoice()));
+//console.log(playRound(getPlayerChoice(), getComputerChoice()));
