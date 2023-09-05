@@ -41,29 +41,13 @@ function playRound(playerSelection, computerSelection) {
         console.log("computer wins!");
         return -1;
     }
-}
-
-function getPlayerChoice() {
-    // let playerChoice = prompt("Select your choice (Rock,Paper,Scissors): ");
-    switch (playerChoice.toLowerCase()) {
-        case "rock":
-            playerChoice = choices[0];
-            break;
-
-        case "paper":
-            playerChoice = choices[1];
-            break;
-
-        case "scissors":
-            playerChoice = choices[2];
-            break;
-        default:
-            console.log("incorrect input. try again")
-            getPlayerChoice();
-            break;
-    }
-    return playerChoice;
 }   
 
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener('click' , () => {
+        playRound(button.className, getComputerChoice());
+    });
+});
 
 //console.log(playRound(getPlayerChoice(), getComputerChoice()));
